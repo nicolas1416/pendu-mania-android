@@ -1,0 +1,53 @@
+name: Fabriquer l'application Android
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Installer les outils
+        run: |
+          npm install
+          pip install pillow
+
+      - name: Ajouter le moteur 3D et les polices au jeu
+        run: |
+          cp node_modules/three/build/three.min.js www/three.min.js
+          mkdir -p www/fonts
+          for f in barlow-condensed-latin-700 barlow-condensed-latin-800; do cp node_modules/@fontsource/barlow-condensed/files/$f-normal.woff2 www/fonts/ || true; done
+          for f in barlow-latin-400 barlow-latin-500 barlow-latin-600 barlow-latin-700; do cp node_modules/@fontsource/barlow/files/$f-normal.woff2 www/fonts/ || true; done
+
+      - name: Créer le projet Android
+        run: |
+          npx cap add android
+          npx cap sync android
+          python3 outils/preparer_android.py
+
+      - name: Fabriquer l'APK
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Renommer
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk PenduMania.apk
+
+      - name: Mettre l'APK à télécharger
+        uses: actions/upload-artifact@v4
+        with:
+          name: PenduMania-Android
+          path: PenduMania.apk
