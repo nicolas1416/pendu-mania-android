@@ -1,0 +1,14 @@
+{
+  "name": "pendu-mania",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pendu Mania, le jeu du pendu en 3D pour Android",
+  "devDependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@fontsource/barlow": "^5.0.0",
+    "@fontsource/barlow-condensed": "^5.0.0",
+    "three": "0.128.0"
+  }
+}

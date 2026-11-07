@@ -1,0 +1,35 @@
+PENDU MANIA pour tablette Android
+=================================
+
+A. Fabriquer l'application (sur ton PC, environ 10 minutes)
+1. Sur https://github.com, connecte-toi (ou crée un compte gratuit).
+2. "+" en haut à droite, puis "New repository". Nom : pendu-mania-android.
+   Clique "Create repository".
+3. Clique sur le lien "uploading an existing file".
+4. Dans ce dossier, sélectionne TOUT (Ctrl + A, y compris le dossier .github),
+   glisse-le dans la page, puis clique "Commit changes".
+5. Onglet "Actions" : la fabrication démarre seule (5 à 8 minutes).
+   Attends la coche verte.
+6. Clique sur la ligne terminée, puis en bas sur "PenduMania-Android" :
+   tu télécharges un .zip qui contient PenduMania.apk.
+   Dézippe-le pour récupérer PenduMania.apk.
+
+B. Mettre l'APK sur la tablette (au choix)
+- Câble USB : branche la tablette, choisis "Transfert de fichiers" sur la
+  tablette, puis copie PenduMania.apk dans son dossier "Download".
+- Google Drive : dépose PenduMania.apk dans ton Drive, puis télécharge-le
+  depuis l'appli Drive sur la tablette.
+
+C. Installer sur la tablette (Android 16)
+1. Ouvre l'appli "Fichiers", va dans "Téléchargements" et touche PenduMania.apk.
+2. Android indique que l'installation d'applis inconnues est bloquée :
+   touche "Paramètres", active "Autoriser cette source", puis reviens.
+3. Touche "Installer".
+4. Si Play Protect affiche un avertissement ("application inconnue"),
+   touche "Plus de détails" puis "Installer quand même".
+   C'est normal : l'appli est faite maison et non publiée sur le Play Store.
+5. Pendu Mania apparaît avec son icône parmi tes applications.
+
+L'appli fonctionne sans internet, en plein écran, en mode paysage ou portrait.
+Pour mettre à jour le jeu plus tard : refais la fabrication, puis installe
+le nouvel APK par-dessus ; la progression est conservée.

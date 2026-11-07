@@ -1,0 +1,8 @@
+{
+  "appId": "fr.pendumania.jeu",
+  "appName": "Pendu Mania",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#3B2F25"
+  }
+}
